@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // "BASE DE DATOS" DE PRODUCTOS
     // Se incluye aquí para evitar problemas al abrir el archivo localmente y cumplir con los requisitos del curso.
     const productos = [
-      { "id": 1, "nombre": "Monitor Gear", "descripcion": "Monitor 22\" Full HD, Panel IPS, 100Hz", "stock": 20, "precio": 69990, "img": "img/monitor/1.jpg", "categoria": "monitor" },
+      { "id": 1, "nombre": "Monitor Gear", "descripcion": "Monitor 22\" Full HD, Panel IPS, 100Hz", "stock": 20, "precio": 69990, "img": "img/monitor/1.png", "categoria": "monitor" },
       { "id": 2, "nombre": "Samsung Odyssey", "descripcion": "OLED G6 27 pulgadas 160hz", "stock": 30, "precio": 649990, "img": "img/monitor/2.png", "categoria": "monitor" },
       { "id": 3, "nombre": "Xiaomi G", "descripcion": "Pro 27 pulgadas 180 hz", "stock": 40, "precio": 299990, "img": "img/monitor/3.png", "categoria": "monitor" },
-      { "id": 4, "nombre": "ASUS ROG Strix XG27WCMS", "descripcion": "1ms, 240 hz, 27 pulgadas", "stock": 59, "precio": 890000, "img": "img/monitor/4.jpg", "categoria": "monitor" },
+      { "id": 4, "nombre": "ASUS ROG Strix XG27WCMS", "descripcion": "1ms, 240 hz, 27 pulgadas", "stock": 59, "precio": 890000, "img": "img/monitor/4.png", "categoria": "monitor" },
       { "id": 5, "nombre": "Mouse Logitech", "descripcion": "DPI 8000, laser", "stock": 18, "precio": 49990, "img": "img/mouse/1.png", "categoria": "mouse" },
       { "id": 6, "nombre": "Mouse Gear", "descripcion": "7 botones programables, sensor óptico de 800 a 4000 DPI", "stock": 10, "precio": 12990, "img": "img/mouse/2.jpg", "categoria": "mouse" },
       { "id": 7, "nombre": "Mouse Mlogix", "descripcion": "Alámbrico, 800 dpi", "stock": 7, "precio": 5690, "img": "img/mouse/3.jpg", "categoria": "mouse" },
