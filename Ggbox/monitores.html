@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitores - Gg box</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-box-seam me-2"></i>Gg box</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="catalogo.html">Catálogo</a>
+                    </li>
+                </ul>
+                <div id="nav-auth-section" class="d-flex align-items-center me-2"></div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                         <a class="nav-link" href="carrito.html">
+                            <i class="bi bi-cart-fill"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+        <h2 class="text-center fw-bold mb-4">Nuestro Catálogo</h2>
+        
+        <!-- Menú de Categorías -->
+        <ul class="nav nav-pills justify-content-center mb-4">
+            <li class="nav-item"><a class="nav-link" href="catalogo.html">Todos</a></li>
+            <li class="nav-item"><a class="nav-link active" href="monitores.html">Monitores</a></li>
+            <li class="nav-item"><a class="nav-link" href="mouses.html">Mouses</a></li>
+            <li class="nav-item"><a class="nav-link" href="teclados.html">Teclados</a></li>
+            <li class="nav-item"><a class="nav-link" href="graficas.html">Tarjetas Gráficas</a></li>
+        </ul>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <!-- Solo productos de la categoría Monitores -->
+            <div class="col">
+                <div class="card h-100 product-card rounded-3 overflow-hidden border-0">
+                    <div class="card-img-container rounded-top-3"><img src="img/monitor/1.png" class="card-img-top" alt="Monitor Gear"><div class="img-overlay"><a href="carrito.html" class="btn btn-light"><i class="bi bi-cart-plus-fill me-2"></i> Agregar</a></div></div>
+                    <div class="card-body d-flex flex-column"><h6 class="card-title fw-semibold">Monitor Gear</h6><p class="card-text text-body-secondary small flex-grow-1">Monitor 22" Full HD, Panel IPS, 100Hz</p><div class="d-flex justify-content-between align-items-center mt-auto pt-2"><p class="card-text text-primary fw-bold fs-5 mb-0">$69.990</p><span class="badge bg-success">En Stock (20)</span></div></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 product-card rounded-3 overflow-hidden border-0">
+                    <div class="card-img-container rounded-top-3"><img src="img/monitor/2.png" class="card-img-top" alt="Samsung Odyssey"><div class="img-overlay"><a href="carrito.html" class="btn btn-light"><i class="bi bi-cart-plus-fill me-2"></i> Agregar</a></div></div>
+                    <div class="card-body d-flex flex-column"><h6 class="card-title fw-semibold">Samsung Odyssey</h6><p class="card-text text-body-secondary small flex-grow-1">OLED G6 27 pulgadas 160hz</p><div class="d-flex justify-content-between align-items-center mt-auto pt-2"><p class="card-text text-primary fw-bold fs-5 mb-0">$649.990</p><span class="badge bg-success">En Stock (30)</span></div></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 product-card rounded-3 overflow-hidden border-0">
+                    <div class="card-img-container rounded-top-3"><img src="img/monitor/3.png" class="card-img-top" alt="Xiaomi G"><div class="img-overlay"><a href="carrito.html" class="btn btn-light"><i class="bi bi-cart-plus-fill me-2"></i> Agregar</a></div></div>
+                    <div class="card-body d-flex flex-column"><h6 class="card-title fw-semibold">Xiaomi G</h6><p class="card-text text-body-secondary small flex-grow-1">Pro 27 pulgadas 180 hz</p><div class="d-flex justify-content-between align-items-center mt-auto pt-2"><p class="card-text text-primary fw-bold fs-5 mb-0">$299.990</p><span class="badge bg-success">En Stock (40)</span></div></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 product-card rounded-3 overflow-hidden border-0">
+                    <div class="card-img-container rounded-top-3"><img src="img/monitor/4.png" class="card-img-top" alt="ASUS ROG Strix"><div class="img-overlay"><a href="carrito.html" class="btn btn-light"><i class="bi bi-cart-plus-fill me-2"></i> Agregar</a></div></div>
+                    <div class="card-body d-flex flex-column"><h6 class="card-title fw-semibold">ASUS ROG Strix</h6><p class="card-text text-body-secondary small flex-grow-1">1ms, 240 hz, 27 pulgadas</p><div class="d-flex justify-content-between align-items-center mt-auto pt-2"><p class="card-text text-primary fw-bold fs-5 mb-0">$890.000</p><span class="badge bg-success">En Stock (59)</span></div></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Gg Box - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

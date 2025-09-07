@@ -1,16 +1,20 @@
 
+<!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gg box - Iniciar Sesión</title>
+    <title>Iniciar Sesión - Gg box</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Hoja de estilos personalizada -->
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
-    <!-- BARRA DE NAVEGACIÓN -->
+    <!-- Barra de Navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-box-seam me-2"></i>Gg box</a>
@@ -26,12 +30,14 @@
                         <a class="nav-link" href="catalogo.html">Catálogo</a>
                     </li>
                 </ul>
-                <div id="nav-auth-section" class="d-flex align-items-center"></div>
-                <ul class="navbar-nav ms-2">
+                <ul class="navbar-nav">
                     <li class="nav-item">
+                       <!-- El botón "Iniciar Sesión" está activo porque estamos en esta página -->
+                       <a href="login.html" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-in-right me-1"></i> Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item ms-2">
                          <a class="nav-link" href="carrito.html">
                             <i class="bi bi-cart-fill"></i>
-                            <span class="badge bg-primary ms-1 cart-count">0</span>
                         </a>
                     </li>
                 </ul>
@@ -39,24 +45,30 @@
         </div>
     </nav>
 
-    <!-- CONTENIDO PRINCIPAL -->
+    <!-- Contenido Principal -->
     <main class="container my-5">
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-5">
-                <div class="card shadow-lg">
-                    <div class="card-body p-4 p-md-5">
-                        <h3 class="card-title text-center mb-4">Iniciar Sesión</h3>
+                <div class="card shadow">
+                    <div class="card-body p-4">
+                        <h2 class="text-center fw-bold mb-4">Iniciar Sesión</h2>
+                        <!-- Formulario con validaciones de Bootstrap -->
+                        <!-- novalidate previene la validación por defecto del navegador -->
                         <form id="login-form" class="needs-validation" novalidate>
                             <div class="mb-3">
                                 <label for="username" class="form-label">Nombre de Usuario</label>
+                                <!-- required hace que el campo sea obligatorio -->
                                 <input type="text" class="form-control" id="username" required>
+                                <!-- Mensaje de error que se mostrará si el campo está vacío -->
                                 <div class="invalid-feedback">
                                     Por favor, ingresa tu nombre de usuario.
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Contraseña</label>
+                                <!-- required y minlength="6" definen las reglas de validación -->
                                 <input type="password" class="form-control" id="password" required minlength="6">
+                                <!-- Mensaje de error para la contraseña -->
                                 <div class="invalid-feedback">
                                     La contraseña debe tener al menos 6 caracteres.
                                 </div>
@@ -69,15 +81,16 @@
         </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="bg-dark text-white text-center py-4 mt-5">
+    <!-- Pie de Página -->
+    <footer class="bg-dark text-white text-center py-4 mt-5 fixed-bottom">
         <div class="container">
             <p class="mb-0">&copy; 2025 Gg Box - Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- SCRIPTS -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
+
