@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gg box - Vista Previa Final</title>
+
+    <!-- Enlaces a las hojas de estilo (CSS) -->
+    <!-- Bootstrap CSS: Framework principal para el diseño y la estructura. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons: Biblioteca de íconos oficial de Bootstrap. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN (NAVBAR) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#" id="brand-link"><i class="bi bi-box-seam me-2"></i>Gg box</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" id="home-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="catalog-link">Catálogo</a>
+                    </li>
+                </ul>
+                <div id="nav-auth-section" class="d-flex align-items-center"></div>
+                <ul class="navbar-nav ms-2">
+                    <li class="nav-item">
+                         <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+                            <i class="bi bi-cart-fill"></i>
+                            <span class="badge bg-primary ms-1 cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA -->
+    <main class="container my-4">
+        <section id="home-section">
+            <header class="hero shadow rounded overflow-hidden mb-5">
+                <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"><img src="https://images.unsplash.com/photo-1598986643329-8664b1db2de0?q=80&w=2070&auto-format&fit=crop" class="d-block w-100" alt="Setup Gamer"></div>
+                        <div class="carousel-item"><img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?q=80&w=2070&auto-format&fit=crop" class="d-block w-100" alt="Componentes de PC"></div>
+                        <div class="carousel-item"><img src="https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b?q=80&w=2070&auto-format&fit=crop" class="d-block w-100" alt="Teclado iluminado"></div>
+                    </div>
+                    <div class="hero-overlay">
+                        <div>
+                            <h1 class="display-4 fw-bold">Bienvenido a Gg Box</h1>
+                            <p class="lead">Encuentra la mejor tecnología para tu setup.</p>
+                            <a href="#" class="btn btn-primary btn-lg mt-3" id="see-catalog-btn">Ver Catálogo</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <h2 class="text-center fw-bold mb-4">Productos Destacados</h2>
+            <div id="featured-products" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4"></div>
+        </section>
+        <section id="catalog-section" class="d-none">
+            <h2 class="text-center fw-bold mb-4">Nuestro Catálogo</h2>
+            <div id="catalog-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4"></div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Gg Box - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- COMPONENTES FLOTANTES (Modals y Offcanvas) -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title">Tu Carrito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div id="offcanvas-cart-body" class="offcanvas-body d-flex flex-column"></div>
+    </div>
+    <div class="toast-container">
+        <div id="notificationToast" class="toast" role="alert">
+            <div class="toast-header bg-primary text-white">
+                <strong class="me-auto">Gg box</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body">¡Producto añadido al carrito!</div>
+        </div>
+    </div>
+    <div class="modal fade" id="loginModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Iniciar Sesión</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form id="login-form" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Nombre de Usuario</label>
+                    <input type="text" class="form-control" id="username" required>
+                    <div class="invalid-feedback">
+                        Por favor, ingresa tu nombre de usuario.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" required minlength="6">
+                    <div class="invalid-feedback">
+                        La contraseña debe tener al menos 6 caracteres.
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="successModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title">¡Compra Exitosa!</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <i class="bi bi-check-circle-fill fa-4x text-success mb-3"></i>
+            <p class="lead">Gracias por tu compra.</p>
+            <p>Este es el final de la simulación. ¡Tu pedido ha sido procesado!</p>
+          </div>
+        </div>
+      </div>
+    </div>
